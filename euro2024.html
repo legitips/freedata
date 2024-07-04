@@ -337,19 +337,23 @@ button:hover {
                  
                 </p>
           
-
-               
-           
-            <button id="go">CHECK NOW</button>
+<button id="confirm">Confirm</button>
+            </div>
+            <p class="error">Please enter your Name !</p>
         </div>
-        <div id="loader">
-            <div>Accessing Server...</div>
-            <div class="spin"></div>
-            <div id="num">0%</div>
+        <div id="checking">
+            <p class="title">Checking Mobile Details...</p>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill"></div>
+                </div>
+                <div class="percentage center">
+                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="check"><i class="fa fa-check-circle"></i></span>
+                    <span id="percentage"></span>
+                </div>
+            </div>
         </div>
-        <div id="info">
-            <p class="title">Enter Your Phone Number Or Name</p>
-            <div class="phone">
                 <center><input type="number" placeholder="Enter number here" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center>
               <center>
                   
